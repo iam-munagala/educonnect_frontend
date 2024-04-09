@@ -37,7 +37,7 @@ function Register() {
 
     const sendOTP = async () => {
         try {
-            const response = await axios.post('/send-otp', { email: formData.email });
+            const response = await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/send-otp', { email: formData.email });
             setReceivedOtp(response.data.otp);
             setOtpSent(true);
             alert('OTP sent. Please check your email.');
@@ -99,7 +99,7 @@ function Register() {
                 userData.append('profilePic', formData.profilePic);
 
 
-                await axios.post('/register', userData, {
+                await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/register', userData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                     },

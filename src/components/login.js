@@ -40,7 +40,7 @@ function Login() {
     setLoading(true);
     console.log(email, password, role);
     try {
-      const response = await axios.post('/login', {
+      const response = await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/login', {
         email,
         password,
         role

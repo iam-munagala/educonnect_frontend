@@ -23,7 +23,7 @@ const UserAppBar = () => {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const response = await axios.get('/appbar-userdetails', {
+        const response = await axios.get('https://bored-constantine-demo1234r5t.koyeb.app/appbar-userdetails', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`, 
           },

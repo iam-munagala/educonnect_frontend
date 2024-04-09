@@ -31,7 +31,7 @@ const NewCourseEnrollment = () => {
     const fetchAvailableCourses = async () => {
         setIsLoading(true);
         try {
-            const response = await axios.get('/user/get-unenrolled-courses', {
+            const response = await axios.get('https://bored-constantine-demo1234r5t.koyeb.app/user/get-unenrolled-courses', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
             });
             console.log(response.data);
@@ -59,7 +59,7 @@ const NewCourseEnrollment = () => {
         const isConfirmed = window.confirm(`Are you sure you want to enroll in ${coursename}?`);
         if (isConfirmed) {
             try {
-                const response = await axios.post('/user/enroll-course', { courseId,coursename }, {
+                const response = await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/user/enroll-course', { courseId,coursename }, {
                     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                 });
                 alert(`${response.data.message}`);

@@ -51,7 +51,7 @@ function UserProfile() {
     const fetchUserData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('/appbar-userdetails', {
+        const response = await axios.get('https://bored-constantine-demo1234r5t.koyeb.app/appbar-userdetails', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         setUserData({
@@ -84,7 +84,7 @@ function UserProfile() {
 
     try {
       setLoading(true);
-      await axios.post('/user/update-profile', formData, {
+      await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/user/update-profile', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('token')}`,

@@ -22,7 +22,7 @@ const AdminDashboard = () => {
   }, []);
 
   const fetchCourses = async () => {
-    const response = await axios.get('/admin/courses', {
+    const response = await axios.get('https://bored-constantine-demo1234r5t.koyeb.app/admin/courses', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }
@@ -50,7 +50,7 @@ const AdminDashboard = () => {
 
     if (isConfirmed) {
       try {
-        await axios.delete(`/admin/delete-courses/${courseId}`, {
+        await axios.delete(`https://bored-constantine-demo1234r5t.koyeb.app/admin/delete-courses/${courseId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         fetchCourses();

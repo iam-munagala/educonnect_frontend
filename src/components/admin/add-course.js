@@ -38,7 +38,7 @@ const AddCourse = () => {
     setLoading(true);
     try {
       
-      const response = await axios.post('/admin/add-courses', {
+      const response = await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/admin/add-courses', {
         ...courseDetails,
         popularity: 0, 
       }, {

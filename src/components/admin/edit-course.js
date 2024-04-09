@@ -38,7 +38,7 @@ const EditCourse = () => {
     }
     setLoading(true);
     try {
-      await axios.put(`/admin/edit-courses/${courseDetails.courseid}`, courseDetails, {
+      await axios.put(`https://bored-constantine-demo1234r5t.koyeb.app/admin/edit-courses/${courseDetails.courseid}`, courseDetails, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
 

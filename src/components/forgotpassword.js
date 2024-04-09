@@ -40,7 +40,7 @@ function ForgotPassword() {
     }
     setLoading(true);
     try {
-        const { data } = await axios.post('/new-password-send-otp', { email });
+        const { data } = await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/new-password-send-otp', { email });
         setLoading(false);
         setServerOtp(data.otp); 
         setOtpSent(true);

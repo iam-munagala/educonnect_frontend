@@ -22,7 +22,7 @@ const UserDashboard = () => {
   const fetchEnrolledCourses = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get('/user/enrolled-courses', {
+      const response = await axios.get('https://bored-constantine-demo1234r5t.koyeb.app/user/enrolled-courses', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setEnrolledCourses(response.data);
@@ -37,7 +37,7 @@ const UserDashboard = () => {
     const isConfirmed = window.confirm('Are you sure you want to unenroll from this course?');
     if (isConfirmed) {
       try {
-        await axios.delete(`/user/unenroll-course/${enrollId}`, {
+        await axios.delete(`https://bored-constantine-demo1234r5t.koyeb.app/user/unenroll-course/${enrollId}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
         alert('Successfully unenrolled from the course.');
