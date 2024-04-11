@@ -63,7 +63,7 @@ function ForgotPassword() {
     }
     setLoading(true);
     try {
-        await axios.post('/reset-password', { email,newPassword });
+        await axios.post('https://bored-constantine-demo1234r5t.koyeb.app/reset-password', { email,newPassword });
         alert('Password has been reset successfully. You can now log in with your new password.');
         navigate('/');
       } catch (err) {
